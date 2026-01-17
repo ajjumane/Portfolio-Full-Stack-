@@ -258,9 +258,11 @@
     const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     async function loadDynamicProjects() {
-        const { data, error } = await supabaseClient
-            .from('projects') // The table name from your screenshot
-            .select('*');
+        const { data: projects } = await supabase
+              .from("projects")
+              .select("*")
+              .order("id", { ascending: true });
+
 
         if (error) {
             console.error('Error fetching projects:', error);
@@ -305,4 +307,5 @@
 </body>
 
 </html>
+
 
