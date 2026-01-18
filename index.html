@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="tabicon.png">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body class="light-mode">
@@ -48,6 +49,12 @@
             </div>
             
         </div>
+
+            <div class="hero-3d">
+            <canvas id="techCanvas"></canvas>
+        </div>
+    </div>
+
     </header>
 
     <section id="about" class="about-section section-padding reveal">
@@ -315,7 +322,7 @@
                     <div class="project-header">
                         <i class="fas fa-folder-open"></i>
                         <div class="project-links">
-                            <a href="https://github.com/ajjumane/PennyWise-ExpenceTracker" target="_blank" aria-label="GitHub Repo"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/ajjumane/PennyWise---Expence-Tracker" target="_blank" aria-label="GitHub Repo"><i class="fab fa-github"></i></a>
                             <a href="https://penny-wise-expence-tracker.vercel.app/" target="_blank" aria-label="External Link"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
@@ -329,7 +336,7 @@
 
 
 
-                
+
                 <div class="project-item">
                     <div class="project-header">
                         <i class="fas fa-folder-open"></i>
@@ -349,7 +356,7 @@
                 </div>
 
 
-
+                
 
                 <div class="project-item">
                     <div class="project-header">
@@ -512,7 +519,71 @@ document.addEventListener('DOMContentLoaded', () => {
     animate();
 });
 </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+<script>
+const canvas = document.getElementById("techCanvas");
+
+// Scene
+const scene = new THREE.Scene();
+
+// Camera
+const camera = new THREE.PerspectiveCamera(
+    50,
+    canvas.clientWidth / canvas.clientHeight,
+    0.1,
+    1000
+);
+camera.position.z = 4;
+
+// Renderer
+const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
+
+// Torus Knot (tech object)
+// Geometry & Material
+const geometry = new THREE.BoxGeometry(1, 1, 1); // size 1x1x1
+const material = new THREE.MeshStandardMaterial({
+    color: 0xffffff,
+    metalness: 0.7,
+    roughness: 0.2,
+});
+const cube = new THREE.Mesh(geometry, material);
+scene.add(cube);
+
+// Camera
+camera.position.z = 4; // adjust depending on object size
+
+// Lighting
+// Lights
+const pointLight = new THREE.PointLight(0x00ffff, 1);
+pointLight.position.set(5, 5, 5);
+scene.add(pointLight);
+
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
+scene.add(ambientLight);
+
+// Animate
+function animate() {
+    requestAnimationFrame(animate);
+    cube.rotation.x += 0.005;
+    cube.rotation.y += 0.01;
+    renderer.render(scene, camera);
+}
+animate();
+
+
+// Handle resizing
+window.addEventListener("resize", () => {
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+    renderer.setSize(width, height);
+});
+</script>
+
 </body>
 </html>
-
-
