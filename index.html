@@ -223,13 +223,81 @@
 
 
 <section id="projects" class="projects-section section-padding reveal">
-    <div class="container">
-        <h2><span class="section-num">04.</span> My Work</h2>
-        <div class="project-grid" id="project-container">
-            <p style="color: white; text-align: center;">Loading projects from the cloud...</p>
+        <div class="container">
+            <h2><span class="section-num">04.</span> My Work</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <div class="project-header">
+                        <i class="fas fa-folder-open"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/ajjumane/Moodify" target="_blank" aria-label="GitHub Repo"><i class="fab fa-github"></i></a>
+                            <a href="https://moodifyaj.vercel.app/" target="_blank" aria-label="External Link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3>Moodify - Mood Matcher</h3>
+                    <p class="project-description">A web-app that suggests personalized playlists based on mood, activity, and preferences.</p>
+                    <ul class="project-tech-list">
+                        <li>Java</li>
+                        <li>TypeScript</li>
+                        <li>React</li>
+                        <li>Frontend (HTML/CSS/JS)</li>
+                    </ul>
+                </div>
+
+                
+                <div class="project-item">
+                    <div class="project-header">
+                        <i class="fas fa-folder-open"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/ajjumane/PennyWise---Expence-Tracker" target="_blank" aria-label="GitHub Repo"><i class="fab fa-github"></i></a>
+                            <a href="https://penny-wise-expence-tracker.vercel.app/" target="_blank" aria-label="External Link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3>PennyWise - Expence Tracker</h3>
+                    <p class="project-description">Track your expenses effortlessly and stay in control of your finances.</p>
+                    <ul class="project-tech-list">
+                        <li>Frontend (HTML/CSS/JS)</li>
+                        <li>Backend - MongoDB</li>
+                    </ul>
+                </div>
+
+
+                <div class="project-item">
+                    <div class="project-header">
+                        <i class="fas fa-folder-open"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/ajjumane/mygarage" target="_blank" aria-label="GitHub Repo"><i class="fab fa-github"></i></a>
+                            <a href="https://codesandbox.io/p/sandbox/github/ajjumane/mygarage" target="_blank" aria-label="External Link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3>My Garage</h3>
+                    <p class="project-description">A personal website that showcases all my favorite cars and bikes with detailed information in an aesthetic layout.</p>
+                    <ul class="project-tech-list">
+                        <li>Frontend (HTML/CSS/JS)</li>
+                        <li>Performance Analysis</li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header">
+                        <i class="fas fa-folder-open"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/ajjumane/Cinema-Booking-System" target="_blank" aria-label="GitHub Repo"><i class="fab fa-github"></i></a>
+                            <a href="https://codesandbox.io/p/sandbox/github/ajjumane/Cinema-Booking-System" target="_blank" aria-label="External Link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3>Cinema Booking System</h3>
+                    <p class="project-description">Cinema Booking System lets users view movies, check show timings, and book available seats online with ease.</p>
+                    <ul class="project-tech-list">
+                        <li>Backend (MySql)</li>
+                        <li>Frontend (HTML/CSS/JS)</li>
+                    </ul>
+                </div>
+
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -245,15 +313,24 @@
             </div>
         </div>
     </section>
+    
+    
+    <div id="snake-cursor">
+        <div class="cursor-node head"></div>
+        <div class="cursor-node tail"></div>
+        <div class="cursor-node tail"></div>
+        <div class="cursor-node tail"></div>
+        <div class="cursor-node tail"></div>
+        <div class="cursor-node tail"></div>
+        <div class="cursor-node tail"></div>
+    </div>
+    
+<script src="script.js"></script>
 
-   
-
-    <script src="script.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
-    // 2. Replace with your actual credentials from Supabase Settings -> API
+                                                                                    // SUPABASE CODE
     const SUPABASE_URL = 'https://wskehyuejpkyxcnisrlu.supabase.co';
     const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indza2VoeXVlanBreXhjbmlzcmx1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjgzOTk3ODksImV4cCI6MjA4Mzk3NTc4OX0.IvRh7uWh5BYWuoXvARidqTMhUaQQ3yJ1wlMS1E283ko'; 
     const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
@@ -301,19 +378,10 @@
     // Run the function when the page loads
     loadDynamicProjects();
 
-</script>
 
-<div id="snake-cursor">
-    <div class="cursor-node head"></div>
-    <div class="cursor-node tail"></div>
-    <div class="cursor-node tail"></div>
-    <div class="cursor-node tail"></div>
-    <div class="cursor-node tail"></div>
-    <div class="cursor-node tail"></div>
-    <div class="cursor-node tail"></div>
-</div>
 
-<script>
+
+                                                                    //CURSOR SNAKE CODE
 document.addEventListener('DOMContentLoaded', () => {
     const mouse = { x: 0, y: 0 };
     const container = document.createElement('div');
