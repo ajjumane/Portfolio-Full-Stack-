@@ -17,9 +17,9 @@
     /* Dark Mode Colors */
     --dm-text-primary: #e0e0e0;
     --dm-text-secondary: #a0a0a0;
-    --dm-background-primary: #1a1a2e; /* Dark Blue */
-    --dm-background-secondary: #16213e; /* Slightly darker */
-    --dm-accent-color: #bb86fc; /* Purple */
+    --dm-background-primary: #0e0e18; /* Dark Blue */
+    --dm-background-secondary: #0d1325; /* Slightly darker */
+    --dm-accent-color: #9254de; /* Purple */
     --dm-highlight-color: #03dac6; /* Teal */
     --dm-border-color: #334257;
     --dm-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -626,7 +626,7 @@ body.dark-mode .skill-category li .tag {
 }
 
 .cert-btn:hover {
-    background-color: var(--highlight-color);
+    background-color:#2b0f4b;
 }
 
 .cert-btn i {
@@ -902,4 +902,20 @@ footer i.fas.fa-heart {
         flex-direction: column;
         gap: 15px;
     }
+}
+
+
+/* Hide default cursor */
+* { cursor: none !important; }
+
+.cursor-node {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background: #bb86fc; /* Solid color */
+    border-radius: 50%;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    /* NO TRANSITIONS HERE */
 }
