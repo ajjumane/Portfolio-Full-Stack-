@@ -258,19 +258,37 @@ ul {
     min-height: 90vh;
     display: flex;
     align-items: center;
+    justify-content: flex-start; /* ← KEY */
 }
+
 
 .hero-section .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: flex-start; /* ← KEY */
     gap: 50px;
+ 
+    width: 100%;
 }
+
+.hero-3d {
+    flex: 1;
+    min-width: 300px;
+    height: 400px; /* FIX: give explicit height */
+    position: relative;
+}
+
+#techCanvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
 
 .hero-content {
     flex: 2;
     min-width: 300px;
+    text-align: left; /* ← IMPORTANT */
 }
 
 .hero-content .greeting {
@@ -919,3 +937,7 @@ footer i.fas.fa-heart {
     transform: translate(-50%, -50%);
     /* NO TRANSITIONS HERE */
 }
+
+
+
+
