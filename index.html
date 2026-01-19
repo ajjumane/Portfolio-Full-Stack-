@@ -62,7 +62,7 @@
             <h2><span class="section-num">01.</span> About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Hello there! I'm Ajinkya Mane, a dedicated Computer Engineer with a strong passion for developing robust and user-friendly applications.</p>
+                    <p>A dedicated Computer Engineer with a strong passion for developing robust and user-friendly applications.</p>
                     <p>My journey in tech began with a curiosity for how things work, quickly evolving into hands-on experience in both **front-end development** and **intelligent systems (AI)**.</p>
                     <p>I thrive in environments where I can leverage my skills in HTML, CSS, JavaScript, Java, and C/C++ to build innovative solutions. I'm also deeply interested in **Prompt Engineering** and applying AI models like ChatGPT, Gemini, and Claude to solve complex problems.</p>
                     <div class="social-links">
@@ -521,70 +521,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
-<script>
-const canvas = document.getElementById("techCanvas");
 
-// Scene
-const scene = new THREE.Scene();
-
-// Camera
-const camera = new THREE.PerspectiveCamera(
-    50,
-    canvas.clientWidth / canvas.clientHeight,
-    0.1,
-    1000
-);
-camera.position.z = 4;
-
-// Renderer
-const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
-renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-renderer.setPixelRatio(window.devicePixelRatio);
-
-// Torus Knot (tech object)
-// Geometry & Material
-const geometry = new THREE.BoxGeometry(1, 1, 1); // size 1x1x1
-const material = new THREE.MeshStandardMaterial({
-    color: 0xffffff,
-    metalness: 0.7,
-    roughness: 0.2,
-});
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
-
-// Camera
-camera.position.z = 4; // adjust depending on object size
-
-// Lighting
-// Lights
-const pointLight = new THREE.PointLight(0x00ffff, 1);
-pointLight.position.set(5, 5, 5);
-scene.add(pointLight);
-
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
-scene.add(ambientLight);
-
-// Animate
-function animate() {
-    requestAnimationFrame(animate);
-    cube.rotation.x += 0.005;
-    cube.rotation.y += 0.01;
-    renderer.render(scene, camera);
-}
-animate();
-
-
-// Handle resizing
-window.addEventListener("resize", () => {
-    const width = canvas.clientWidth;
-    const height = canvas.clientHeight;
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
-    renderer.setSize(width, height);
-});
-</script>
 
 </body>
 </html>
-
