@@ -263,26 +263,15 @@ ul {
 
 
 .hero-section .container {
+    margin-top: -60px; /* Adjust as needed */
     display: flex;
     align-items: center;
     justify-content: flex-start; /* ← KEY */
-    gap: 50px;
+    gap: 100px;
  
     width: 100%;
 }
 
-.hero-3d {
-    flex: 1;
-    min-width: 300px;
-    height: 400px; /* FIX: give explicit height */
-    position: relative;
-}
-
-#techCanvas {
-    width: 100% !important;
-    height: 100% !important;
-    display: block;
-}
 
 
 .hero-content {
