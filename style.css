@@ -927,6 +927,18 @@ footer i.fas.fa-heart {
     /* NO TRANSITIONS HERE */
 }
 
+.logo{
+    margin-left: -6%;
+}
+.d-logo {
+    margin-left: 2%;
+    font-family: var(--font-mono);
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--accent-color);
+
+}
+
 
 
 
