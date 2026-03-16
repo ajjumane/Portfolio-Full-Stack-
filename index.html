@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ajinkya Mane — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+<div id="cur">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M2,2 L21,8 L12,12 L8,21 Z" />
+    </svg>
+</div>
+<nav>
+  <div class="nav-logo">AM_</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li><li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<div class="wrapper">
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-tag">Computer Engineer</div>
+        <h1>Ajinkya<br><span class="line2">Mane.</span></h1>
+        <p class="hero-desc">Full-Stack Developer &amp; AI enthusiast from Pune. Building intelligent systems that bridge the gap between human needs and machine capability.</p>
+        <div class="hero-actions"><a href="#projects" class="btn-p">View Projects</a><a href="#contact" class="btn-g">Get in Touch</a></div>
+       
+      </div>
+      <div class="hero-right">
+        <canvas id="robot-canvas" width="400" height="480"></canvas>
+        <div class="rbadge b1"><span style="font-size:18px">🎓</span><div><div class="bnum">8.7</div><div class="blbl">CGPA</div></div></div>
+        <div class="rbadge b2"><span style="font-size:18px">⚡</span><div><div class="bnum">Full Stack</div><div class="blbl">Developer</div></div></div>
+        <div class="rbadge b3"><span style="font-size:18px">🤖</span><div><div class="bnum">AI</div><div class="blbl">Enthusiast</div></div></div>
+      </div>
+    </div>
+    <div class="scroll-hint"><span>SCROLL</span><div class="scroll-line"></div></div>
+  </section>
+  <section id="about" class="fade-sec">
+    <div class="sh"><span class="stag">01 / About</span><h2 class="stitle">Who I Am</h2><div class="sline"></div></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Hello there! I'm Ajinkya Mane, a dedicated Computer Engineer with a strong passion for developing robust and user-friendly applications.</p>
+        <p>My journey in tech began with a curiosity for how things work, quickly evolving into hands-on experience in both <strong>front-end development</strong> and <strong>intelligent systems (AI)</strong>.</p>
+        <p>I thrive in environments where I can leverage my skills in HTML, CSS, JavaScript, Java, and C/C++ to build innovative solutions. I'm also deeply interested in <strong>Prompt Engineering</strong> and applying AI models like ChatGPT, Gemini, and Claude to solve complex problems.</p>
+      </div>
+      <div class="about-image-wrapper">
+        <div class="about-image">
+          <img src="pfp.jpg" alt="Ajinkya Mane">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="skills" class="fade-sec">
+    <div class="sh"><span class="stag">02 / Skills</span><h2 class="stitle">Tech Stack</h2><div class="sline"></div></div>
+    <div class="skills-grid">
+      <div class="skcard"><div class="skcat">Frontend</div><div class="skname">HTML / CSS / JavaScript<span class="skpct">95%</span></div><div class="skbar"><div class="skfill" data-w="95"></div></div></div>
+      <div class="skcard"><div class="skcat">Backend</div><div class="skname">MongoDB / MySQL / Supabase<span class="skpct">80%</span></div><div class="skbar"><div class="skfill" data-w="80"></div></div></div>
+      <div class="skcard"><div class="skcat">Programming</div><div class="skname">Python Full-Stack<span class="skpct">85%</span></div><div class="skbar"><div class="skfill" data-w="85"></div></div></div>
+      <div class="skcard"><div class="skcat">Programming</div><div class="skname">Java<span class="skpct">80%</span></div><div class="skbar"><div class="skfill" data-w="80"></div></div></div>
+      <div class="skcard"><div class="skcat">Systems</div><div class="skname">C / C++<span class="skpct">78%</span></div><div class="skbar"><div class="skfill" data-w="78"></div></div></div>
+      <div class="skcard"><div class="skcat">AI</div><div class="skname">Prompt Engineering &amp; AI Tools<span class="skpct">90%</span></div><div class="skbar"><div class="skfill" data-w="90"></div></div></div>
+      <div class="skcard"><div class="skcat">Soft Skill</div><div class="skname">Documentation<span class="skpct">92%</span></div><div class="skbar"><div class="skfill" data-w="92"></div></div></div>
+      <div class="skcard"><div class="skcat">Paradigm</div><div class="skname">Full-Stack Development<span class="skpct">83%</span></div><div class="skbar"><div class="skfill" data-w="83"></div></div></div>
+    </div>
+  </section>
+  <section id="projects" class="fade-sec">
+    <div class="sh"><span class="stag">03 / Projects</span><h2 class="stitle">Featured Work</h2><div class="sline"></div></div>
+    <div class="proj-grid">
+      <div class="pcard"><div class="pnum">01</div><div class="picon">&#129302;</div><div class="ptitle">Alfred — Voice Assistant</div><div class="pdesc">A J.A.R.V.I.S.-inspired virtual assistant for voice commands, automation and intelligent responses.</div><div class="ptags"><span class="ptag">Python</span><span class="ptag">NLP</span><span class="ptag">Voice AI</span></div></div>
+      <div class="pcard"><div class="pnum">02</div><div class="picon">&#127968;</div><div class="ptitle">Multi-Device Home Mgmt</div><div class="pdesc">Cloud-based home management with real-time database and multi-device sync across smart devices.</div><div class="ptags"><span class="ptag">IoT</span><span class="ptag">Supabase</span><span class="ptag">Cloud</span></div></div>
+      <div class="pcard"><div class="pnum">03</div><div class="picon">&#127760;</div><div class="ptitle">NGO Site Management</div><div class="pdesc">Dual-module NGO platform with Admin Dashboard and live information broadcasting.</div><div class="ptags"><span class="ptag">Full-Stack</span><span class="ptag">MongoDB</span><span class="ptag">Admin</span></div></div>
+      <div class="pcard"><div class="pnum">04</div><div class="picon">&#128274;</div><div class="ptitle">User Auth using Streamlit</div><div class="pdesc">A secure user lifecycle portal featuring registration and login functionalities built with Streamlit.</div><div class="ptags"><span class="ptag">Python</span><span class="ptag">Streamlit</span><span class="ptag">CSS</span></div><div style="margin-top:15px;display:flex;gap:10px;"><a href="https://github.com/ajjumane/Internship---User-authentication" class="cbtn" target="_blank">GitHub</a><a href="https://useralogiandregis.streamlit.app/" class="cbtn" target="_blank">Live Link</a></div></div>
+      <div class="pcard"><div class="pnum">05</div><div class="picon">&#128176;</div><div class="ptitle">PennyWise - Expense Tracker</div><div class="pdesc">Track your expenses effortlessly and stay in control of your finances.</div><div class="ptags"><span class="ptag">HTML/CSS/JS</span><span class="ptag">MongoDB</span></div><div style="margin-top:15px;display:flex;gap:10px;"><a href="https://github.com/ajjumane/PennyWise---Expence-Tracker" class="cbtn" target="_blank">GitHub</a><a href="https://penny-wise-expence-tracker.vercel.app/" class="cbtn" target="_blank">Live Link</a></div></div>
+      <div class="pcard"><div class="pnum">06</div><div class="picon">&#127911;</div><div class="ptitle">Moodify - Mood Matcher</div><div class="pdesc">A web-app that suggests personalized playlists based on mood, activity, and preferences.</div><div class="ptags"><span class="ptag">Java</span><span class="ptag">React</span><span class="ptag">TypeScript</span></div><div style="margin-top:15px;display:flex;gap:10px;"><a href="https://github.com/ajjumane/Moodify" class="cbtn" target="_blank">GitHub</a><a href="https://moodifyaj.vercel.app/" class="cbtn" target="_blank">Live Link</a></div></div>
+      <div class="pcard"><div class="pnum">07</div><div class="picon">&#127916;</div><div class="ptitle">Cinema Booking System</div><div class="pdesc">Cinema Booking System lets users view movies, check show timings, and book available seats online with ease.</div><div class="ptags"><span class="ptag">MySQL</span><span class="ptag">HTML/CSS/JS</span></div><div style="margin-top:15px;display:flex;gap:10px;"><a href="https://github.com/ajjumane/Cinema-Booking-System" class="cbtn" target="_blank">GitHub</a><a href="https://codesandbox.io/p/sandbox/github/ajjumane/Cinema-Booking-System" class="cbtn" target="_blank">Live Link</a></div></div>
+    </div>
+  </section>
+  <section id="education" class="fade-sec">
+    <div class="sh"><span class="stag">04 / Education</span><h2 class="stitle">Academic Path</h2><div class="sline"></div></div>
+    <div class="tline">
+      <div class="titem"><div class="tdot"></div><div class="ecard"><div class="edeg">B.E in Computer Science &amp; Engineering</div><div class="esch">Savitribai Phule Pune University</div><div class="emeta"><span>2024 – Present</span><span>Pune</span></div><span class="egrade">CGPA: 8.7 / 10</span></div></div>
+      <div class="titem"><div class="tdot"></div><div class="ecard"><div class="edeg">Diploma in Information Technology</div><div class="esch">AISSMS Polytechnic</div><div class="emeta"><span>2021 – 2024</span><span>Pune</span></div><span class="egrade">Score: 83.5%</span></div></div>
+      <div class="titem"><div class="tdot"></div><div class="ecard"><div class="edeg">10th SSC Board</div><div class="esch">Modern High School</div><div class="emeta"><span>2020 – 2021</span><span>Pune</span></div><span class="egrade">Score: 83.2%</span></div></div>
+    </div>
+  </section>
+  <section id="certs" class="fade-sec">
+    <div class="sh"><span class="stag">05 / Certificates</span><h2 class="stitle">Achievements</h2><div class="sline"></div></div>
+    <div class="cert-grid">
+      <div class="ccard"><div class="cicon">&#127760;</div><div><div class="cname">Introduction to Web Development</div><div class="corg">LearnTube</div><button class="cbtn" onclick="showProPopup('certificates/Learntube Web Dev Certificate.pdf', 'Introduction to Web Development')">Open File</button></div></div>
+      <div class="ccard"><div class="cicon">&#128188;</div><div><div class="cname">Basic Microsoft Training</div><div class="corg">Infosys</div><button class="cbtn" onclick="showProPopup('certificates/basic excel infosys.pdf', 'Basic Microsoft Training')">Open File</button></div></div>
+      <div class="ccard"><div class="cicon">&#128225;</div><div><div class="cname">LORA-Based IoT Smart Light Systems</div><div class="corg">Research Project</div><button class="cbtn" onclick="showProPopup('certificates/LoRa IOIT.pdf', 'LORA-Based IoT Smart Light Systems')">Open File</button></div></div>
+      <div class="ccard"><div class="cicon">&#127942;</div><div><div class="cname">Management and Leadership</div><div class="corg">Infosys</div><button class="cbtn" onclick="showProPopup('certificates/Infosys SpringBoard certificate.pdf', 'Management and Leadership')">Open File</button></div></div>
+      <div class="ccard"><div class="cicon">&#9729;</div><div><div class="cname">Generative AI</div><div class="corg">Google Cloud</div><button class="cbtn" onclick="showProPopup('certificates/Generative AI - google cloud.pdf', 'Generative AI')">Open File</button></div></div>
+      <div class="ccard"><div class="cicon">&#128202;</div><div><div class="cname">Basics of DSA</div><div class="corg">SkillUP</div><button class="cbtn" onclick="showProPopup('certificates/DSA - simplilearn.pdf', 'Basics of DSA')">Open File</button></div></div>
+      <div class="ccard"><div class="cicon">&#129302;</div><div><div class="cname">Prompt Engineering</div><div class="corg">Microsoft</div><button class="cbtn" onclick="showProPopup('certificates/Prompt Engg - Microsoft.pdf', 'Prompt Engineering')">Open File</button></div></div>
+      <div class="ccard"><div class="cicon">&#9883;</div><div><div class="cname">Java Full Stack with React JS &amp; AI</div><div class="corg">BRAINOVISION</div><button class="cbtn" onclick="showProPopup('certificates/java nsttp.pdf', 'Java Full Stack with React JS &amp; AI')">Open File</button></div></div>
+      <div class="ccard"><div class="cicon">&#128240;</div><div><div class="cname">Cinema Booking System — Publication</div><div class="corg">IJIRCCE</div><button class="cbtn" onclick="showProPopup('', 'Cinema Booking System')">Open File</button></div></div>
+    </div>
+  </section>
+  <section id="publications" class="fade-sec">
+    <div class="sh"><span class="stag">06 / Publications</span><h2 class="stitle">Research</h2><div class="sline"></div></div>
+    <div class="pub"><div class="ptitle2">Implementation &amp; Research Paper on Cinema Booking System</div><p style="color:var(--muted2);font-size:15px;line-height:1.7;margin:14px 0">Comprehensive research covering system architecture, database design, and UX optimization for automated cinema booking.</p><div class="pjrn">IJRPR &amp; IJIRCEE — Published</div></div>
+  </section>
+  <section id="contact" class="fade-sec" style="padding-bottom:80px">
+    <div class="ctwrap">
+      <h2 class="cttitle">Let's Connect</h2>
+      <p class="ctsub">Open to opportunities, collaborations, and interesting conversations about tech and AI.</p>
+      <div style="margin-bottom: 40px;">
+        <a href="mailto:ajjumane@gmail.com" class="btn-p" style="font-size: 16px; padding: 16px 40px; position: relative; z-index: 2;">Say Hello 👋</a>
+      </div>
+      <div class="ctlinks">
+        <a href="mailto:ajjumane@gmail.com" class="ctlink"><span>&#9993;</span> ajjumane@gmail.com</a>
+        <a href="tel:8805983485" class="ctlink"><span>&#128222;</span> 8805983485</a>
+        <a href="#" class="ctlink"><span>&#128188;</span> LinkedIn</a>
+        <a href="#" class="ctlink"><span>&#128025;</span> GitHub</a>
+      </div>
+    </div>
+  </section>
+</div>
+<footer>
+  <div class="flogo">Ajinkya Mane</div>
+  <div>Crafted with precision · Pune, India · 2025</div>
+  <div>ajjumane@gmail.com</div>
+</footer>
+
+<div id="pro-popup" class="modal-overlay">
+  <div class="modal-content" style="max-width:1000px; width: 95%; height: 95vh; padding: 40px 20px 20px 20px; display: flex; flex-direction: column;">
+    <span class="close-btn" onclick="closeProPopup()">&times;</span>
+    <div style="flex: 1; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: #fff;">
+      <iframe id="pro-popup-iframe" src="" style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
